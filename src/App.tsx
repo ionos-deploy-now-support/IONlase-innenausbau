@@ -2,9 +2,9 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { HashRouter, Routes, Route } from "react-router-dom";
+// import { HashRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
-import Layout from "./components/Layout";
+/* import Layout from "./components/Layout";
 import Index from "./pages/Index";
 import Leistungen from "./pages/Leistungen";
 import Referenzen from "./pages/Referenzen";
@@ -15,11 +15,11 @@ import Kontakt from "./pages/Kontakt";
 import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import Admin from "./pages/Admin";
-import NotFound from "./pages/NotFound";
+import NotFound from "./pages/NotFound"; */
 
 const queryClient = new QueryClient();
 
-const App = () => (
+/* const App = () => (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
       <TooltipProvider>
@@ -45,6 +45,18 @@ const App = () => (
       </TooltipProvider>
     </ThemeProvider>
   </QueryClientProvider>
+); */
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+      </TooltipProvider>
+    </ThemeProvider>
+  </QueryClientProvider>
 );
+
 
 export default App;
